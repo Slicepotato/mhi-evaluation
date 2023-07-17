@@ -20,7 +20,7 @@ export class FetchService {
 
   GetEmployees(): Observable<Fetch> {
     return this.http
-      .get<Fetch>(this.baseurl + '/employees/')
+      .get<Fetch>(this.baseurl + '/employees')
       .pipe(retry(1), catchError(this.errorHandl));
   }
 

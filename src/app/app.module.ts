@@ -1,14 +1,20 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SingleEmployeeDataComponent } from './single-employee-data/single-employee-data.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FetchService } from './fetch.service';
-import { ListEmployeesComponent } from './list-employees/list-employees.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from '@app/components/home/home.component';
+import { ListEmployeesComponent } from '@app/components/list-employees/list-employees.component';
+import { SingleEmployeeDataComponent } from '@app/components/single-employee-data/single-employee-data.component';
+import { AppHeaderComponent } from '@app/components/app-header/app-header.component';
+import { AppFooterComponent } from '@app/components/app-footer/app-footer.component';
+import { MainNavComponent } from '@app/components/main-nav/main-nav.component';
+// import { GlobalErrorHandler } from '@app/errors/global-error-handler';
+// import { HttpLoadingInterceptor } from '@app/errors/http-loading.interceptor';
 
 
 @NgModule({
@@ -16,14 +22,29 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     SingleEmployeeDataComponent,
     ListEmployeesComponent,
-    HomeComponent
+    HomeComponent,
+    AppHeaderComponent,
+    AppFooterComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
+  /*
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpLoadingInterceptor,
+      multi: true,
+    }
+  ],*/
   bootstrap: [AppComponent, FetchService]
 })
 export class AppModule { }

@@ -1,0 +1,15 @@
+<div *ngIf="loading">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+ 
+<div *ngIf="errorMessage" class="alert alert-warning">
+  <strong>Warning!</strong> {{errorMessage | json}}
+</div>
+
+<ul>
+    <li *ngFor="let employee of employeesList">
+        <a href="/employee/{{employee.id}}">{{employee.employee_name}}</a>
+    </li>
+</ul>
