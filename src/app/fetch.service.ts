@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Fetch } from './shared/fetch';
-import { Observable, throwError } from 'rxjs';
+import { Observable, from, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -31,12 +31,6 @@ export class FetchService {
 
       return JSON.parse(this.empList);
     }
-  }
-
-  GetEmployee(id: string): Observable<Fetch> {
-    return this.http
-      .get<Fetch>(this.baseurl + '/employee/' + id)
-      .pipe(retry(0), catchError(this.errorHandl));
   }
 
   errorHandl(error: { error: { message: string; }; status: any; message: any; }) {
