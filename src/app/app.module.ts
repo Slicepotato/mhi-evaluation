@@ -13,6 +13,8 @@ import { SingleEmployeeDataComponent } from '@app/components/single-employee-dat
 import { AppHeaderComponent } from '@app/components/app-header/app-header.component';
 import { AppFooterComponent } from '@app/components/app-footer/app-footer.component';
 import { MainNavComponent } from '@app/components/main-nav/main-nav.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 // import { GlobalErrorHandler } from '@app/errors/global-error-handler';
 // import { HttpLoadingInterceptor } from '@app/errors/http-loading.interceptor';
 
@@ -31,7 +33,9 @@ import { MainNavComponent } from '@app/components/main-nav/main-nav.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   /*
