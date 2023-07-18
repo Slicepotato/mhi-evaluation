@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FetchService } from '@app/fetch.service';
+import { FetchService } from '../../fetch.service';
 
 @Component({
   selector: 'app-single-employee-data',
