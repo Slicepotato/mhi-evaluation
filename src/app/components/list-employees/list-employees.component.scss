@@ -1,0 +1,11 @@
+.emp-link {
+    text-decoration: none;
+
+    &:focus, &:hover {
+        text-decoration: underline;
+    }
+}
+
+.list-group {
+    list-style-type: none;
+}

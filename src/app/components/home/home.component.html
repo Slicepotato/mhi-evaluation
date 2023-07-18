@@ -1,1 +1,33 @@
-<p>home works!</p>
+<main class="container-fluid pt-4 pb-4">
+    <section class="container details">
+        <h2>Project details</h2>
+        <p>Dummy API is a free API utility used for testing web applications and teaching. One of their APIs simulates a database of employees in a company. The results are returned in JSON format as a list with the fields:</p>
+        <code ng-non-bindable class="mb-4 d-block">
+            [
+            <ul class="list-group code-indent">
+                <li>{{"{id: number}"}}</li>
+                <li>{{"{employee_name: string}"}}</li>
+                <li>{{"{employee_salary: number}"}}</li>
+                <li>{{"{employee_age: number}"}}</li>
+                <li>{{"{profile_image: string}"}}</li>
+            </ul>
+            ]
+        </code>
+        <p>Given the URLs below for accessing info from their website, write a single‐page application in Angular that does the following:</p>
+        <ol class="list-group reqs-list mb-4">
+            <li>Returns a list of names for all employees between the ages of 22 and 28 whose salaries are greater than 1000. Sort the list in order of employees with the highest salary to the lowest salary.</li>
+            <li>Given a particular employee id, return the employee’s name if it begins with a vowel. If it doesn’t, return “Employee’s name does not begin with a vowel”. If an id is entered that does not correspond to a valid employee, return “Invalid Employee”.</li>
+        </ol>
+        <h2>URL for all employee data</h2>
+        <a href="http://dummy.restapiexample.com/api/v1/employees" target="_blank">http://dummy.restapiexample.com/api/v1/employees</a>
+        <h2>URL for single employee data</h2>
+        <a href="http://dummy.restapiexample.com/api/v1/employee/{id}" target="_blank">http://dummy.restapiexample.com/api/v1/employee/&lcub;id &rcub;</a>
+        <p><small><em>*&lcub;id &rcub; is to be replaced with the employee id</em></small></p>
+        <p class="mt-4">Ensure the web application is responsive and aesthetically designed for user experience. Handle improper user inputs with relevant error handling and notices to the user.</p>
+    </section>
+    <hr />
+    <section class="container getter">
+        <h2 class="mt-4">Load Employees</h2>
+        <a type="button" class="btn btn-primary" href="/employees">Go Fetch</a>
+    </section>
+</main>

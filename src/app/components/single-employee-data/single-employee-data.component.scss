@@ -1,0 +1,40 @@
+.list-group {
+    list-style-type: none;
+}
+
+.profile-card {
+    .profile-img-wrapper {        
+        width: 200px;
+    }
+
+    .profile-info {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile-card {
+        display: flex;
+    
+        .profile-img-wrapper {
+            order: 1;
+            flex: 1 0 auto;
+        }
+    
+        .profile-info {
+            margin-right: 2rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-card {
+        .profile-img-wrapper {
+            flex: unset;            
+        }
+    
+        .profile-info {
+            flex: 1 0 auto;
+        }
+    }
+}

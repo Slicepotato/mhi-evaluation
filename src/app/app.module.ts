@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 // import { FetchService } from './fetch.service';
 import { HomeComponent } from './components/home/home.component';
 import { ListEmployeesComponent } from './components/list-employees/list-employees.component';
@@ -27,6 +28,7 @@ import { MainNavComponent } from './components/main-nav/main-nav.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
