@@ -25,7 +25,7 @@
                 <ul class="list-group">
                     <li><input required id="vowelFilter" name="vowelFilter" type="number" min="0" max={{employeesList.length}} placeholder="id" #vowelFilter (change)="filterVowel(vowelFilter.value)" /></li>
                     <li ng-if="vowelFilterResponse">
-                        <h4 class="mt-2">{{vowelFilterResponse}}</h4>
+                        <h4 class="mt-2 {{alertClass}}">{{vowelFilterResponse}}</h4>
                     </li>
                 </ul>
             </div>

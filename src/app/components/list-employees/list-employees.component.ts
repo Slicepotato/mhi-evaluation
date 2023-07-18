@@ -18,6 +18,7 @@ export class ListEmployeesComponent implements OnInit {
   results: any | undefined;
   vowelFilterResponse: string | undefined;
   wordEval: string | undefined;
+  alertClass: string | undefined;
 
   constructor(private fetchService: FetchService){}
 
@@ -62,11 +63,18 @@ export class ListEmployeesComponent implements OnInit {
 
     if(id == 0) {
       this.vowelFilterResponse = '';
+      this.alertClass = '';
+    } 
+    else if(id > this.employeesList.length) {
+      this.vowelFilterResponse =  "Invalid Employee";
+      this.alertClass = "alert alert-danger";
     }
     else if(!found) {
-      this.vowelFilterResponse =  "Employee's name does not begin with a vowel."
+      this.vowelFilterResponse =  "Employee's name does not begin with a vowel.";
+      this.alertClass = "alert alert-warning"
     } else {
       this.vowelFilterResponse = found.employee_name;
+      this.alertClass = "alert alert-success"
     }
   }
 

@@ -25,3 +25,37 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+---
+
+## Project Details & Requirements
+
+Dummy API is a free API utility used for testing web applications and teaching. One of their APIs simulates a database of employees in a company. The results are returned in JSON format as a list with the fields:
+
+```
+[
+    {id: number}
+    {employee_name: string}
+    {employee_salary: number}
+    {employee_age: number}
+    {profile_image: string}
+]
+```
+
+Given the URLs below for accessing info from their website, write a single‐page application in Angular that does the following:
+
+1. Returns a list of names for all employees between the ages of 22 and 28 whose salaries are greater than 1000. Sort the list in order of employees with the highest salary to the lowest salary.
+
+2. Given a particular employee id, return the employee’s name if it begins with a vowel. If it doesn’t, return "Employee's name does not begin with a vowel". If an id is entered that does not correspond to a valid employee, return "Invalid Employee"
+
+### URL for all employee data:
+
+> http://dummy.restapiexample.com/api/v1/employees
+
+### URL for single employee data:
+
+> http://dummy.restapiexample.com/api/v1/employee/{id}
+
+\*{id} is to be replaced with the employee id
+
+Ensure the web application is responsive and aesthetically designed for user experience. Handle improper user inputs with relevant error handling and notices to the user.
